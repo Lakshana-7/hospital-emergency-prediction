@@ -31,24 +31,6 @@ To build a predictive analytics system that estimates hospital emergency admissi
 ---
 
 ## 🧠 Machine Learning Algorithm
-### 📍 Linear Regression
-
-The model follows the equation:
-
-y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_4 + \beta_5x_5 + \beta_6x_6 + \beta_7x_7 + \beta_8x_8
-
-Where:
-- **y** → Predicted emergency cases
-- **x₁** → Previous day cases
-- **x₂** → Temperature
-- **x₃** → Holiday status
-- **x₄** → Flu cases
-- **x₅** → Day of the week
-- **x₆** → Humidity
-- **x₇** → Air Quality Index (AQI)
-- **x₈** → Local Event Status
-
----
 
 ## ✨ Features
 - 📈 Predicts hospital emergency admissions
