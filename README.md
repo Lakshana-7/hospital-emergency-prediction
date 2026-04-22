@@ -32,7 +32,7 @@ To build a predictive analytics system that estimates hospital emergency admissi
 
 The model follows the equation:
 
-y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_4
+y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_4 + \beta_5x_5 + \beta_6x_6 + \beta_7x_7 + \beta_8x_8
 
 Where:
 - **y** → Predicted emergency cases
@@ -40,6 +40,10 @@ Where:
 - **x₂** → Temperature
 - **x₃** → Holiday status
 - **x₄** → Flu cases
+- **x₅** → Day of the week
+- **x₆** → Humidity
+- **x₇** → Air Quality Index (AQI)
+- **x₈** → Local Event Status
 
 ---
 
@@ -56,12 +60,19 @@ Where:
 ## 📂 Project Structure
 
 ```text
-hospital-emergency-prediction-system/
+hospital-emergency-prediction/
 │
-├── app.py
-├── dataset.csv
-├── requirements.txt
-└── README.md
+├── app.py                     # Main landing page
+├── utils.py                   # Shared data loading & model training
+├── generate_data.py           # Synthetic dataset generator
+├── dataset.csv                # Historical data
+├── requirements.txt           # Dependencies
+├── README.md                  # Project documentation
+│
+└── pages/                     # Multi-page dashboard
+    ├── 1_🔮_Predictor.py      # Emergency admissions prediction form
+    ├── 2_📊_Dashboard.py      # Interactive charts and trends
+    └── 3_📚_Dataset.py        # Raw data viewer and exporter
 ```
 
 ---
@@ -70,9 +81,13 @@ hospital-emergency-prediction-system/
 The model takes the following inputs:
 
 - 🏥 Previous Day Cases
-- 🌡️ Temperature
-- 🎉 Holiday Status
 - 🤒 Flu Cases
+- 🌡️ Temperature
+- 💧 Humidity
+- 🌫️ Air Quality Index
+- 📅 Day of the Week
+- 🎉 Holiday Status
+- 🎟️ Local Event Status
 
 ---
 
@@ -83,15 +98,22 @@ The model takes the following inputs:
 
 ## ▶️ How to Run the Project
 
-### 1️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+This is a modern Full-Stack application. You need to run both the Python Backend API and the React Frontend Website.
 
-### 2️⃣ Run the Streamlit Application
+### 1️⃣ Start the Backend API (Python)
+Open a terminal in the root project folder:
 ```bash
-streamlit run app.py
+.\.venv\Scripts\python api.py
 ```
+This will start the machine learning server on `http://localhost:5000`.
+
+### 2️⃣ Start the Frontend Website (React)
+Open a **new** terminal, navigate to the frontend folder, and start Vite:
+```bash
+cd frontend
+npm run dev
+```
+This will start the beautiful website on `http://localhost:5173`.
 
 ---
 
