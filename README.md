@@ -2,6 +2,9 @@
 A machine learning project using Linear Regression and Streamlit to predict hospital emergency admissions based on healthcare data.
 
 # 🏥 Hospital Emergency Prediction System
+![Website Preview](home page.png)
+![prediction data](prediction_input.png)
+![output](prediction_output.png)
 
 ## 📌 Overview
 The **Hospital Emergency Prediction System** is a machine learning-powered web application developed to predict the number of emergency patient admissions in hospitals.
